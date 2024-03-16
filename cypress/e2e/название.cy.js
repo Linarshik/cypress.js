@@ -3,10 +3,10 @@ describe('Автотесты на авторизацию', function () {
     it('Правильный логин и правильный пароль', function () {
         cy.visit('https://login.qa.studio/');
 
-        cy.get('#mail').type('german@dolnikov.ru'); //Ввел логин
+        cy.get('#mail').type('login'); //Ввел логин
         cy.get('#loginButton').should('be.disabled'); //Кнопка некликабельная
         
-        cy.get('#pass').type('iLoveqastudio1'); //Ввел пароль
+        cy.get('#pass').type('password'); //Ввел пароль
         cy.get('#loginButton').should('be.enabled'); //Кнопка кликабельная
         
         cy.get('#loginButton').click(); //Нажимаю войти
